@@ -130,3 +130,13 @@ p.x7{
     font-size: 20px;
     border-radius: 4px;
 }
+p.x8{
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 2px 2px 5px red;
+    border: 2px solid blue;
+    text-align: justify;
+    max-width: 530px;
+    max-height: 190px;
+    font-size: 125%;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="utf-8">
+        <title>javaScript wep sitesi</title>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    
+    <body>
+        <div class ="nav">
+            <nav>
+                <ul class="nav">
+                    <li><a href = "/deneme.html"> Ana Sayfa</a></li>
+                    <li><a href = "#haberler"> Haberler</a></li>
+                    <li><a href = "#html"> HTML</a></li>
+                    <li><a href = "#css"> CSS</a></li>
+                    <li><a href = "#javaScript"> javaScript</a>
+                <ul>
+                        <li><a href = "giris.html"> JavaScript Giriş</a></li>
+                        <li><a href = "yazim.html"> Yazım(Syntax)</a></li>
+                        <li><a href = "degiskenler.html"> Değişkenler</a></li>
+                        <li><a href = "operator.html"> Operatörler</a></li>
+                        <li><a href = "aritmetik.html"> Aritmetik</a></li>
+                        <li><a href = "veritip.html"> Veri Tipleri</a></li>
+                        <li><a href = "olaylar.html"> Olaylar</a></li>
+                        <li><a href = "dizi.html"> Dizi İşlemleri</a></li>
+                        <li><a href = "kosul.html"> Koşul Yapıları</a></li>
+                        <li><a href = "dongu.html"> Döngüler</a></li>
+                        <li><a href = "tip.html"> Tip Dönüşümleri</a></li>
+                        <li><a href = "fonksiyon.html"> Fonksiyon Yapısı</a></li>
+                        <li><a href = "nesne.html"> Nesne Modeli ve kullanımı</a></li>
+                        <li><a href = "dom.html">JavaScript DOM Kullanımı</a></li>
+                        <li><a href = "calismavemimari.html"> Çalışma Yapısı ve Mimari</a>
+                    </ul>
+                    </li>
+                    <li><a href = "#"> İletişim</a></li>
+                </ul>
+            </nav>    
+        </div>
+        <h1 class="baslik">JavaScript DOM (Document Object Model) Kullanımı</h1>
+        <h2 class="baslik">DOM Nedir?</h2>
+        <p class="x3">DOM (Document Object Module) HTML dökümanları içerisinde bulunan nesnelere kolaylıkla erişim sağlamak ve üzerinde işlemler yapabilmek için <br>
+            tasarlanan bir modeldir. DOM ile HTML dosyamızda bulunan her şeye erişim sağlayabiliriz.<br>
+            HTML dosyasında bulunan bütün öğeler, DOM üzerinde bir nesne olarak görülür. DOM modelin ismi, document ise bu nesnelerin kapsayıcısıdır. Bu kapsayıcı <br>
+            içerisinde bulunan <html> evet bildiğiniz html etiketi head, body nesnelerinin içerisinde bulunan diğer nesnelerin kapsayıcısıdır. Head ve body etiketleri<br>
+            de içerisinde bulunan diğer nesnelerin kapsayıcılarıdır. Aynı örüntü üzerinde bu durum tekrar eder.
+        </p>
+        <center><img  src="/assets/resim1.jpeg"  height="465px" width="599px"></center><br>
+        <p class="x3">Document objesi için matruşkaların en büyüğü örneği verilebilir. Ama küçüldükçe bir farklılık doğuyor. Document nesnemizi düşünürsek, bir matruşkanın<br>
+            içerisinde aynı boyutta bulunan iki matruşka çıkabilir.
+        </p>
+        <center><img  src="/assets/resim2.png"  height="365px" width="499px"></center><br>
+        <p class="x3">En büyük matruşkamız document , altındaki html nesnesini ve html objesinin içerisinde bulunan matruşkalar da head ve body nesnelerini temsil ediyor.<br>
+            Aşadaki tablo içerisinde modellemeyi inceleyebilirsiniz:
+        </p>
+        <center><img  src="/assets/resim4.gif"  height="365px" width="499px"></center><br>
+        <h2 class="baslik">Peki ya Node?</h2>
+        <p class="x3">Node(düğüm) iç içe olan bu yapıyı hiyerarşik olarak ayırır. HTML belgesi içerisinde bütün elemanlar bir düğümdür:
+        </p>
+        <p class="x5">< head><br>
+        < /head><br>
+        < body><br>
+        < /body>
+        </p>   
+        <p class="x3">Yukarıda head ve body elemanları birer düğümdür.<br>
+            Basit örneklerle başlayalım:<br>
+        </p>
+        <p class="x7">p id=”sehir”>Eskişehir<br>
+        < script type=”text/javascript”><br>
+        
+          var konum = document.getElementById(“sehir”).innerHTML;<br>
+          alert(konum);<br>
+        < /script><br>
+        </p>  
+        <p class="x3">Erişim sağladığımız kodu inceleyelim. Document ile HTML belgemiz içerisinde bir değere erişeceğimizi belirtiyoruz. getElementById(“sehir”),<br>
+        id değeri “sehir” olan elemana ulaşıyoruz. innerHTML ile id değeri “sehir” olan düğümün içindeki veriye ulaşabiliyoruz.<br>
+        </p>
+        <center><img  src="/assets/resim5.jpeg"  height="100px" width="300px"></center><br>
+        <p class="x3">Yukarıda geçen üç yöntem ile nesnelere erişim sağlayabiliriz<br>
+        </p>
+        
+        <p class="x8">< p id=”sehir”>Eskişehir<br>
+        < p id=”sehir2">Ankara<br>
+        < p class=”konum”>Bulunduğunuz Şehir: <br>
+         
+         < script type=”text/javascript”><br>
+         
+           var konum = document.getElementById(“sehir”).innerHTML;<br>
+           document.getElementsByClassName(“konum”)[0].innerHTML += “< b>” + konum + “< /b>”;<br>
+        < /script><br>
+            </p>  
+        <p class="x3">Id değeri “sehir” olan düğümün içindekileri, “konum” class değeri olan düğümün içerisine ekledik. getElementsByClassName(“konum”)[0], önceki<br> 
+            kod parçamızla yapı olarak neredeyse aynı. Ama kodun sonundaki index numarası nereden çıktı ?<br>
+        </p>
+    </body>
+</html>

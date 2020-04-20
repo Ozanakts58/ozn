@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="utf-8">
+        <title>javaScript wep sitesi</title>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    
+    <body>
+        <div class ="nav">
+            <nav>
+                <ul class="nav">
+                    <li><a href = "/deneme.html"> Ana Sayfa</a></li>
+                    <li><a href = "#haberler"> Haberler</a></li>
+                    <li><a href = "#html"> HTML</a></li>
+                    <li><a href = "#css"> CSS</a></li>
+                    <li><a href = "#javaScript"> javaScript</a>
+                <ul>
+                        <li><a href = "giris.html"> JavaScript Giriş</a></li>
+                        <li><a href = "yazim.html"> Yazım(Syntax)</a></li>
+                        <li><a href = "degiskenler.html"> Değişkenler</a></li>
+                        <li><a href = "operator.html"> Operatörler</a></li>
+                        <li><a href = "aritmetik.html"> Aritmetik</a></li>
+                        <li><a href = "veritip.html"> Veri Tipleri</a></li>
+                        <li><a href = "olaylar.html"> Olaylar</a></li>
+                        <li><a href = "dizi.html"> Dizi İşlemleri</a></li>
+                        <li><a href = "kosul.html"> Koşul Yapıları</a></li>
+                        <li><a href = "dongu.html"> Döngüler</a></li>
+                        <li><a href = "tip.html"> Tip Dönüşümleri</a></li>
+                        <li><a href = "fonksiyon.html"> Fonksiyon Yapısı</a></li>
+                        <li><a href = "nesne.html"> Nesne Modeli ve kullanımı</a></li>
+                        <li><a href = "dom.html">JavaScript DOM Kullanımı</a></li>
+                        <li><a href = "calismavemimari.html"> Çalışma Yapısı ve Mimari</a>
+                    </ul>
+                    </li>
+                    <li><a href = "#"> İletişim</a></li>
+                </ul>
+            </nav>    
+        </div>
+        <h1 class="baslik">JavaScript Nesne Modeli ve Kullanımı</h1>
+        <h2 class="baslik">JavaScript Nesne</h2>
+        <p class="x3">
+            Gerçek hayatta karşınıza çıkan her şey nesnedir. Örneğin araba bir nesnedir.  Arabanın renk, ağırlık, model gibi özellikleri ve çalışma,<br>
+            durma gibi metodları vardır.<br>Aşağıdaki basit kod bir değişkene tek bir değer atamaktadır:
+        </p>
+        <p class="x4">var araba = <br>
+            {marka:"Audi", model:"TT", renk:"Beyaz"};<br>
+        </p>
+        <p class="x3">
+            Bu şekilde pek çok değeri saklayabiliriz.JavaScript nesne için özellikler, ad:değer çifti şeklinde yazılır ve virgün ile birbirinden ayrılır.
+        </p>
+        <h2 class="baslik">JavaScript Nesne Özellikleri</h2>
+        <p class="x3">
+            JavaScript içindeki ad:değer çiftleri özellik (property) olarak adlandırılır.<br>
+        </p>
+        <p class="x4">var ogrenci = <br>
+            {ad:"Ali", soyad:"Veli", numara:110, sinif:"1A"};<br>           
+        </p>
+        <p class="x3">
+            Özellik, nesne içinde veri sakladığımız alanlardır.<br>
+        </p>
+        <h2 class="baslik">JavaScript Nesne Tanımlama</h2>
+        <p class="x3">
+            JavaScript ile nesne tanımlarken (yaratırken) öncelikle nesnemize bir ad veririz.Daha sonra = simgesi ile {} simgeleri arasına özellikleri<br>
+            listeleriz.<br>
+        </p>
+        <p class="x2"var ogrenci = { <br>
+            ad:"Ali",<br>
+            soyad:"Veli",<br>
+            numara:110,<br>
+            sinif:"1A"<br>
+            };
+        </p>
+        <p class="x3">
+            Tanımlama yaparken boşluklar ve satır başları önemsizdir. Nesneyi yukarıdaki gibi de tanımlayabiliriz.<br>
+        </p>
+        <h2 class="baslik">JavaScript Nesnesinin Özelliklerine Erişmek</h2>
+        <p class="x3">Bir JavaScript nesnesinin özelliklerine iki farklı şekilde erişebilirsiniz: nesne.ozellikAdi veya nesne["ozellikAdi"]<br>
+            Yani dilerseniz nesnenin adını yazıp, sonuna nokta ekleyip özelliğin adını yazabilirsiniz veya ikinci yöntem olarak köşeli parantez içinde<br>
+            nesne adını tırnak içine alarak nesne özelliğine erişebilirsiniz.
+        </p>
+        <p class="x4">ogrenci.ad;<br> 
+            //veya<br>
+            ogrenci["ad"];
+        </p>
+    </body>
+</html>
